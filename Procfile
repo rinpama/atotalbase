@@ -1,1 +1,1 @@
-web:gunicorn atotalbase.wsgi --log-file-
+web: gunicorn atotalbase.wsgi --log-file -
