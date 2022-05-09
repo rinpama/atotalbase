@@ -24,10 +24,12 @@ urlpatterns = [
     path('', include('base.urls')),
     path('baseasset/', include('base_asset.urls')),
 
-]\
-+ static(settings.STATIC_URL, document_root=settings.STATICFILES_DIRS)
+]+ static(settings.MEDIA_URL, document_root= settings.MEDIA_ROOT)#
+              # + static(settings.STATIC_URL, document_root=settings.STATICFILES_DIRS)
 
-if settings.DEBUG:
-    urlpatterns += static(
-        settings.MEDIA_URL,
-        document_root=settings.MEDIA_ROOT)
+
+
+# if settings.DEBUG:
+#     urlpatterns += static(
+#         settings.MEDIA_URL,
+#         document_root=settings.MEDIA_ROOT)
