@@ -15,10 +15,19 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
+from . import settings
+from django.contrib.staticfiles.urls import static
 
 urlpatterns = [
 
     path('admin/', admin.site.urls),
     path('', include('base.urls')),
     path('baseasset', include('base_asset.urls')),
-]
+
+]\
++ static(settings.STATIC_URL, document_root=settings.STATICFILES_DIRS)
+
+if settings.DEBUG:
+    urlpatterns += static(
+        settings.MEDIA_URL,
+        document_root=settings.MEDIA_ROOT)
