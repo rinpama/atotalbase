@@ -1,19 +1,21 @@
 {% load static %}
 <!DOCTYPE html>
-<html>
+<html lang="ja">
 <head>
-  <meta charset="utf-8">
-  <title>S3 Static Only</title>
-  <link rel="stylesheet" type="text/css" href="{% static 'css/app.css' %}">
+    <meta charset="utf-8">
+    <title>S3 Static Only</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/app.css' %}">
 </head>
 <body>
-  <header>
+<header>
     <h1>S3 Static Only</h1>
-  </header>
-  {% block main %}
-  {% endblock %}
-  <footer>
+</header>
+
+{% block main %}
+{% endblock %}
+  
+<footer>
     <a href="https://soens.herokuapp.com/">SoensHome</a>
-  </footer>
+</footer>
 </body>
 </html>
