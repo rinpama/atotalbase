@@ -4,5 +4,5 @@ from . import views
 
 app_name='base_asset'
 urlpatterns = [
-    path('baseform/', views.DocumentCreateView.as_view(), name='baseform'),
+    path('bf/', views.DocumentCreateView.as_view(), name='baseform'),
 ]

@@ -22,7 +22,7 @@ urlpatterns = [
 
     path('admin/', admin.site.urls),
     path('', include('base.urls')),
-    path('baseasset/', include('base_asset.urls')),
+    path('ba/', include('base_asset.urls')),
 
 ]+ static(settings.MEDIA_URL, document_root= settings.MEDIA_ROOT)#
               # + static(settings.STATIC_URL, document_root=settings.STATICFILES_DIRS)

@@ -1,23 +1,28 @@
 {% load static %}
 <!DOCTYPE html>
 <html>
-  <head>
+<head>
     <meta charset="utf-8">
-    <title> S3 Example </title>
+    <title> Model Admin Page </title>
     <link rel="stylesheet" type="text/css" href="{% static 'css/app.css' %}">
-  </head>
-  <body>
-    <div class="container">
-      <header>
-        <h1> S3 Example</h1>
+</head>
+<body>
+<div class="container">
+    <header>
+        <h1> Model Admin Page </h1>
         <hr>
-        <a href="{% url 'base:home' %}">Public Uploads</a>
+        現在 Dev上では、[ upload ] 使えません（もっと勉強しましょう！）
         <hr>
-      </header>
-      <main>
+    </header>
+    <main>
         {% block content %}
         {% endblock %}
-      </main>
-    </div>
-  </body>
+    </main>
+    <hr>
+    <a href="{% url 'base:home' %}">BackHome</a>
+</div>
+<footer>
+    <a href="https://soens.herokuapp.com/">SoensHome</a>
+</footer>
+</body>
 </html>
